@@ -1,0 +1,274 @@
+
+
+/* Add this to handle sidebar open/closed in desktop */
+/* Ensure hamburger is visible always */
+
+
+.hamburger svg {
+  color: #ff416c; /* your desired color */
+}
+/* Collapsed state */
+/* Collapsed sidebar for desktop */
+/* Collapsed sidebar for desktop */
+
+
+/* Hide everything except hamburger when collapsed */
+.sidebar.closed .logo-title,
+.sidebar.closed .brand-text,
+.sidebar.closed .nav-links li:not(.logout-li),
+.sidebar.closed .nav-links button {
+  display: none;
+}
+
+/* Hamburger inside collapsed sidebar */
+.sidebar.closed .hamburger {
+  position: relative;
+  top: 15px;
+  margin: 0 auto; /* center horizontally */
+  z-index: 1200;
+}
+
+
+/* Logo + title layout */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 40px !important;;
+  height: 40px !important;;
+  transition: all 0.3s ease;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.emp-line {
+  display: block;
+}
+
+.mgmt-line {
+  display: block;
+  margin-top: 2px;
+}
+
+.nav-name {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 0px !important; /* or try 0px */
+}
+
+
+/* Logout icon mode */
+.icon-only {
+  font-size: 20px;
+  text-align: center;
+  padding: 8px;
+  width: 100%;
+}
+
+/* Rest of nav-links, dropdowns, responsive remain same */
+
+/* Brand Text */
+.brand-text {
+  margin-top: 15px;
+  padding-left: 8px;
+}
+.nav-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+.nav-name {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-links li {
+  width: 100%;
+  padding-left: 5px;
+}
+
+.nav-links a,
+.nav-links span {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  transition: 0.3s ease;
+  border-radius: 6px;
+}
+
+.nav-links a:hover,
+.nav-links span:hover {
+  background-color: #444;
+  color: rgb(108, 108, 255);
+}
+
+.icon-only {
+  text-align: center;
+  font-size: 22px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 8px;
+}
+.dropdown-menu li {
+  margin: 6px 0;
+}
+.dropdown-menu li a {
+  font-size: 14px;
+  color: #ddd;
+}
+.dropdown-menu li a:hover {
+  color: #00ffc8;
+}
+
+/* Logout Button */
+.nav-links button {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+}
+.nav-links button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 75, 43, 0.5);
+}
+.logout-li{
+  padding-bottom: 30px;
+
+}
+.report{
+  cursor: pointer;
+}
+
+/* Remove any global .sidebar.closed rules */
+/* Sidebar default */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px; /* default width for desktop */
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 15px;
+  transition: width 0.3s ease, transform 0.3s ease;
+  overflow-x: hidden;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Desktop collapsed sidebar */
+@media (min-width: 769px) {
+  .sidebar.closed {
+    width: 30px; /* thin sidebar */
+    overflow: visible;
+    align-items: center;
+  }
+
+  /* hide all except logout and hamburger */
+  .sidebar.closed .logo-title,
+  .sidebar.closed .brand-text,
+  .sidebar.closed .nav-links li:not(.logout-li),
+  .sidebar.closed .nav-links button {
+    display: none;
+  }
+
+  .sidebar.closed .hamburger {
+    position: relative;
+    top: 15px;
+    margin: 0 auto;
+  }
+}
+
+/* Hamburger shared styles */
+.hamburger {
+  background: none;
+  border: none;
+  color: #ff416c;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1500; /* above sidebar */
+}
+
+/* Mobile sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Hamburger floats above everything on mobile */
+  .hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+  }
+}
+
+/* Mobile hamburger always visible */
+.mobile-hamburger {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 2000;
+}
+
+@media (max-width: 768px) {
+  .desktop-hamburger { display: none; }
+  .mobile-hamburger { display: block; }
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .sidebar.open-mobile {
+    transform: translateX(0);
+  }
+}

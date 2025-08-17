@@ -1,0 +1,158 @@
+/* Container for the whole form */
+.viewleave-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Form title */
+.viewleave-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Row container for horizontal layout */
+.viewleave-row-horizontal {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Box for individual fields */
+.viewleave-field-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.viewleave-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* Inputs and readonly fields */
+.viewleave-input,
+.viewleave-textarea,
+.viewleave-select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  color: #222;
+  resize: none;
+}
+
+/* Inputs and textareas on focus */
+.viewleave-input:focus,
+.viewleave-textarea:focus,
+.viewleave-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Textarea specific styling */
+.viewleave-textarea {
+  min-height: 80px;
+}
+
+/* Readonly grey style */
+.viewleave-readonly-grey {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Buttons container */
+.viewleave-approval-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Approve / Reject button base */
+.viewleave-approve-btn,
+.viewleave-reject-btn {
+  flex: 1;
+  padding: 12px 0;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+/* Approve button colors */
+.viewleave-approve-btn {
+  background-color: #28a745;
+}
+
+.viewleave-approve-btn:hover,
+.viewleave-approve-btn.active {
+  background-color: #218838;
+}
+
+/* Reject button colors */
+.viewleave-reject-btn {
+  background-color: #dc3545;
+}
+
+.viewleave-reject-btn:hover,
+.viewleave-reject-btn.active {
+  background-color: #b02a37;
+}
+
+/* Buttons at bottom (submit/cancel) */
+.viewleave-form-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+/* Submit button */
+.viewleave-form-buttons button[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.viewleave-form-buttons button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Cancel button */
+.viewleave-cancel-btn {
+  background-color: #6c757d;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.viewleave-cancel-btn:hover {
+  background-color: #5a6268;
+}

@@ -1,0 +1,236 @@
+/* Container padding increased but not too wide for scrollbar */
+#project-list-container div[style*="padding: 20px"] {
+  padding-left: 90px !important; /* more left padding */
+  padding-right: 40px !important;
+  overflow-x: hidden; /* prevent page horizontal scroll */
+}
+.leftgap{
+  padding-left: 80px;
+  padding-right: 30px;
+  padding-top: 20px;
+}
+/* Responsive Table Container */
+#project-list-container .table-responsive {
+  width: 100%;
+  overflow-x: auto; /* horizontal scroll ONLY inside table container */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+#project-list-container #project-table {
+  border-collapse: separate; /* change to separate for border-radius to work */
+  border-spacing: 0; /* no spacing between cells */
+  border-radius: 12px; /* rounded corners */
+  overflow: hidden; /* clip content within rounded corners */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-width: 600px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: white;
+}
+
+/* Make table headers slightly bigger and bold */
+#project-list-container #project-table thead th {
+  background-color: #445c9b; /* bootstrap blue header */
+  color: white;
+  font-weight: 700;
+  font-size: 16px; /* Increased font size */
+  padding: 14px 20px; /* Slightly more padding for better spacing */
+  text-align: left;
+  white-space: nowrap; /* prevent header text wrap */
+}
+
+/* Ensure first and last header cells have rounded corners */
+#project-list-container #project-table thead th:first-child {
+  border-top-left-radius: 12px;
+}
+
+#project-list-container #project-table thead th:last-child {
+  border-top-right-radius: 12px;
+}
+
+/* Also round bottom corners of last row cells */
+#project-list-container #project-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+#project-list-container #project-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+/* Table body cells */
+#project-list-container #project-table tbody td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+  /* Allow text wrap for developer/tester names, remove nowrap */
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Hover effect on rows */
+#project-list-container #project-table tbody tr.main-row:hover {
+  background-color: #f1f9ff;
+  cursor: pointer;
+}
+
+/* Reduce top margin above Employee List */
+#project-list-container #header-container {
+  margin-bottom: 15px; /* reduced from 20px */
+  margin-top: 10px; /* add a small top margin if needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Export buttons container */
+#project-list-container #export-buttons {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Style for Export buttons */
+#project-list-container #export-pdf-btn,
+#project-list-container #export-csv-btn {
+  background-color: #007bff; /* bootstrap blue */
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Hover effect */
+#project-list-container #export-pdf-btn:hover,
+#project-list-container #export-csv-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Link with icon and hover effects */
+#right-link #addlink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: #007bff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Icon image transition */
+#right-link #addlink img {
+  height: 46px;
+  width: auto;
+  margin-right: 8px;
+  border: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Text span initially hidden */
+#right-link #addlink span {
+  display: inline-block;
+  margin-left: 6px;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, max-width 0.3s ease;
+}
+
+/* On hover */
+#right-link #addlink:hover {
+  color: #0056b3;
+}
+
+#right-link #addlink:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+#right-link #addlink:hover span {
+  opacity: 1;
+  max-width: 200px;
+}
+/* Responsive Styles for Project List */
+/* Responsive Styles for Project List */
+/* Responsive Styles for Project List */
+@media (max-width: 600px) {
+  #project-list-container {
+    padding: 10px;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+
+  #project-list-container div[style*="padding: 20px"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-x: hidden;
+  }
+
+  #project-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    table-layout: fixed; /* important to prevent overflow */
+  }
+
+  #project-table thead {
+    display: none;
+  }
+
+#project-table tbody tr.main-row {
+  display: flex;
+  align-items: center;       /* vertically center content */
+  gap: 12px;                 /* small gap between cells */
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+#project-table tbody tr.main-row td {
+  flex: 0 0 auto;            /* fit content width */
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+}
+
+  /* Show only ID and Project Name in main row */
+  #project-table tbody tr.main-row td:not(:first-child):not(:nth-child(2)) {
+    display: none;
+  }
+
+  #project-table tbody tr.expanded-row {
+    display: block;
+    background-color: #eef6ff;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+  }
+
+  #project-table tbody tr.expanded-row td {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .expanded-details div {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+}

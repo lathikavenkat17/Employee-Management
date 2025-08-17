@@ -1,0 +1,90 @@
+/* Minimal and compact breadcrumb container */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 0px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  height: auto;
+  background-color: transparent;
+}
+
+/* Each breadcrumb item */
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+/* Links inside breadcrumb */
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  padding: 2px 0;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  height: 1.5px;
+  background-color: #ff4b2b;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.breadcrumb-item a:hover::after {
+  transform: scaleX(1);
+}
+
+.breadcrumb-item a:hover {
+  color: #000;
+}
+
+/* Current (active) breadcrumb */
+.breadcrumb-active {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Separator ( > symbol ) */
+.breadcrumb-separator {
+  margin: 0 10px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Container for page content below breadcrumb */
+.left {
+  padding: 20px 40px;
+  padding-left: 80px;
+  background-color: #f9f9f9;
+  min-height: 30px;
+  box-sizing: border-box;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .breadcrumb {
+    padding-left: 20px;
+    font-size: 13px;
+  }
+
+  .breadcrumb-separator {
+    margin: 0 6px;
+  }
+
+  .left {
+    padding-left: 20px;
+  }
+}

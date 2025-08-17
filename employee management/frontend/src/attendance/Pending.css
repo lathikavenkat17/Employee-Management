@@ -1,0 +1,57 @@
+/* Add this to your CSS file, e.g., viewleave.css or Navbar.css */
+
+.view-button {
+  background-color:grey;  /* Bootstrap blue */
+  color: #fff;                /* White text */
+  border: none;               /* No border */
+  padding: 8px 16px;          /* Space inside */
+  font-size: 14px;            /* Text size */
+  border-radius: 4px;         /* Rounded corners */
+  cursor: pointer;            /* Pointer on hover */
+  transition: background-color 0.3s ease; 
+  width: 58px;
+  height: 35px;
+  padding-left: 7px;
+/* Smooth hover */
+}
+
+.view-button:hover {
+  background-color: grey;  /* Darker on hover */
+}
+
+.view-button:focus {
+  outline: none;              /* Remove focus outline */
+}
+
+.view-button:active {
+  transform: scale(0.98);     /* Subtle click effect */
+}
+
+/* Add this to your CSS file, e.g., viewleave.css or Navbar.css */
+
+.view-button {
+  background-color:grey;  /* Bootstrap blue */
+  color: #fff;                /* White text */
+  border: none;               /* No border */
+  padding: 8px 16px;          /* Space inside */
+  font-size: 14px;            /* Text size */
+  border-radius: 4px;         /* Rounded corners */
+  cursor: pointer;            /* Pointer on hover */
+  transition: background-color 0.3s ease; 
+  width: 58px;
+  height: 35px;
+  padding-left: 7px;
+/* Smooth hover */
+}
+
+.view-button:hover {
+  background-color: grey;  /* Darker on hover */
+}
+
+.view-button:focus {
+  outline: none;              /* Remove focus outline */
+}
+
+.view-button:active {
+  transform: scale(0.98);     /* Subtle click effect */
+}

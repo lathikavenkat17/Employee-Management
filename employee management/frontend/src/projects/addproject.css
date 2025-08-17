@@ -1,0 +1,203 @@
+.form-container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  background-color: white !important;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  box-sizing: border-box;
+  border: 3px solid #1e2d63 !important;
+}
+.heads {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.text-input,
+.date-input,
+.select-input,
+.textarea-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.text-input:focus,
+.date-input:focus,
+.select-input:focus,
+.textarea-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.textarea-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+
+
+
+.multi-select-box {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 8px;
+  background: #f9f9f9;
+}
+
+.select-input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 8px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-tags .tag {
+  display: inline-flex;
+  align-items: center;
+  background: #007bff;
+  border: 1px solid #0056b3;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.selected-tags .tag .remove-tag {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.selected-tags .tag .remove-tag:hover {
+  color: #ffdddd;
+}
+
+
+/* Container for the buttons */
+
+/* Container for the buttons */
+.button-container {
+  display: flex;
+  justify-content: center;  /* Center the buttons horizontally */
+  gap: 20px;                /* Space between buttons */
+  padding-top: 20px;
+}
+
+/* Common button style */
+.submit-btn,
+.cancel-btn {
+  min-width: 160px;         /* Same width for both buttons */
+  text-align: center;
+  padding: 12px 0;          /* Equal vertical padding */
+  border: none;
+  border-radius: 6px;       /* Same rounded corners as inputs */
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Submit button */
+.submit-btn {
+  background: linear-gradient(135deg, #43a047, #66bb6a);
+  box-shadow: 0 6px 15px rgba(67, 160, 71, 0.5);
+}
+.submit-btn:hover {
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: linear-gradient(135deg, #e53935, #ef5350);
+  box-shadow: 0 6px 15px rgba(229, 57, 53, 0.5);
+}
+.cancel-btn:hover {
+  background: linear-gradient(135deg, #b71c1c, #e53935);
+  transform: translateY(-2px);
+}
+/* Add some margin and styling for the editor */
+.tox .tox-toolbar {
+  background-color: #f8f9fa !important;
+  border-radius: 6px 6px 0 0 !important;
+}
+
+.tox .tox-edit-area {
+  border: 1px solid #ccc !important;
+  border-top: none !important;
+  border-radius: 0 0 6px 6px !important;
+  background: white !important;
+}
+
+.tox .tox-statusbar {
+  border-radius: 0 0 6px 6px !important;
+}
+
+.tox-tinymce {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  /* Remove border and shadow */
+  .form-container {
+    padding: 24px 20px 30px 20px;
+    max-width: 95vw;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .submit-btn,
+  .reset-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+
+  input,
+  select,
+  textarea {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  #form-container label {
+    margin-top: 20px;
+    font-size: 0.95rem;
+  }
+   .move-right {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

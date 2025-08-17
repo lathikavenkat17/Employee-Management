@@ -1,0 +1,129 @@
+/* Form container */
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#reset-btn {
+  background: linear-gradient(135deg, #1e88e5, #42a5f5);
+  box-shadow: 0 6px 15px rgba(30, 136, 229, 0.5);
+  color: rgba(0, 0, 0, 0.589) !important;
+}
+#reset-btn:hover {
+  background: linear-gradient(135deg, #1565c0, #1e88e5);
+  transform: translateY(-2px);
+}
+
+/* Headings */
+.heads {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.form-label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs and Selects */
+.text-input,
+.email-input,
+.tel-input,
+.date-input,
+.select-input,
+.textarea-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.text-input:focus,
+.email-input:focus,
+.tel-input:focus,
+.date-input:focus,
+.select-input:focus,
+.textarea-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Textarea specifics */
+.textarea-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button group container */
+.button-group {
+  display: flex;
+  gap: 15px; /* space between buttons */
+  margin-top: 30px;
+}
+
+/* Buttons styling */
+.button-group button {
+  flex: 1; /* buttons take equal width */
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+/* Submit button - green */
+.submit-btn {
+  background-color: #169123;
+}
+
+.submit-btn:hover {
+  background-color: #127615;
+}
+
+/* Reset button - blue */
+.reset-btn {
+  background-color: #3545f1;
+}
+
+.reset-btn:hover {
+  background-color: #2a35c6;
+}
+
+/* Cancel button - red */
+.cancel-btn {
+  background-color: #d72631;
+}
+
+.cancel-btn:hover {
+  background-color: #a31b23;
+}
+
+.employee-display {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  background-color: #fff; /* white background */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  box-sizing: border-box;
+  /* Optional: add transition like inputs */
+  transition: border-color 0.3s ease;
+  /* If you want it to look exactly like inputs on focus, add: */
+  /* user can't focus this div, so no :focus styles needed */
+}

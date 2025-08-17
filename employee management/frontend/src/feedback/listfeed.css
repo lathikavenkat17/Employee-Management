@@ -1,0 +1,230 @@
+/* =========================
+   Task List Header Styling
+========================= */
+.entire{
+  padding-left: 50px;
+}
+.task-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.task-left-title h2,
+.left-title h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.task-right-link,
+.right-link {
+  position: relative;
+}
+
+.task-right-link .addlink,
+.right-link .addlink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: #007bff;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.task-right-link .addlink img,
+.right-link .addlink img {
+  height: 55px;
+  width: auto;
+  margin-right: 8px;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.task-right-link .addlink span,
+.right-link .addlink span {
+  display: none;
+  margin-left: 6px;
+  color: #007bff;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.task-right-link .addlink:hover img,
+.right-link .addlink:hover img {
+  transform: translateX(-6px);
+}
+
+.task-right-link .addlink:hover span,
+.right-link .addlink:hover span {
+  display: inline;
+  opacity: 1;
+}
+
+/* =========================
+   Export Buttons Styling
+========================= */
+
+.export-buttons {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Style for Export buttons */
+.export-button {
+  background-color: #007bff; /* bootstrap blue */
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Hover effect */
+.export-button:hover {
+  background-color: #0056b3;
+}
+
+/* =========================
+   Task Table Styling
+========================= */
+
+.task-table,
+.attendance-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  min-width: 600px;
+  margin-top: 20px;
+}
+
+.task-table th,
+.attendance-table th {
+  background-color: #445c9b;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px 20px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.task-table td,
+.attendance-table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.task-table thead th:first-child,
+.attendance-table thead th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.task-table thead th:last-child,
+.attendance-table thead th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.task-table tbody tr:last-child td:first-child,
+.attendance-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.task-table tbody tr:last-child td:last-child,
+.attendance-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+.task-table tr:hover,
+.attendance-table tr:hover {
+  background-color: #f1f9ff;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.view-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #218838;
+}
+
+/* =========================
+   Responsive Table Wrapper
+========================= */
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Padding Container Tweak
+========================= */
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background-color: #0056b3;
+  color: white;
+  border-color: #0056b3;
+}

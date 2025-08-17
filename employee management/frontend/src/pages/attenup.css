@@ -1,0 +1,88 @@
+/* Team leads list */
+.team-leads-list {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+}
+
+.team-lead-item {
+  background: #e9ecef;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Container for approve/reject buttons */
+.approve-reject-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Smaller buttons for approve/reject */
+.small-btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.approve-btn {
+  background-color: #28a745;
+}
+
+.approve-btn:hover {
+  background-color: #218838;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+}
+
+.reject-btn:hover {
+  background-color: #c82333;
+}
+
+.greyed {
+  background-color: grey !important;
+  cursor: not-allowed;
+}
+
+/* Container for update/cancel */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Bigger buttons for update/cancel */
+.big-btn {
+  flex: 1; /* take equal space */
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.update-btn {
+  background-color: #007bff;
+}
+
+.update-btn:hover {
+  background-color: #0069d9;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}

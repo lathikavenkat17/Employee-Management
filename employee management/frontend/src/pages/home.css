@@ -1,0 +1,160 @@
+.wel {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  text-align: center;
+}
+
+/* BIG OUTER BOX */
+.overall-box {
+  max-width: 850px;
+  margin: 20px auto 40px auto;
+  padding: 24px 30px;
+  background-color: #786dc4;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Grid for top stats */
+.top-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Smaller stat boxes */
+.stat-box,
+.dashboard-item-box {
+  background-color: white;
+  padding: 15px 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 160px;
+}
+
+/* Dashboard grid */
+.dashboard-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Progress items */
+.progress-item {
+  width: 160px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.bar-chart-wrapper {
+  flex: 1;
+  min-width: 240px;
+  height: 320px;
+}
+
+/* Shrink logo */
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.welcome {
+  font-size: 26px;
+  font-weight: bold;
+}
+/* Desktop collapsed */
+.sidebar.collapsed {
+  width: 30px;
+}
+
+/* Mobile hidden by default */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%); /* hidden */
+    width: 200px;
+  }
+  .sidebar.open {
+    transform: translateX(0); /* visible */
+  }
+  /* collapsed shouldn't apply on mobile, only desktop */
+}
+
+/* ---------------- RESPONSIVE STYLES ---------------- */
+@media (max-width: 1024px) {
+  .overall-box {
+    max-width: 95%;
+    padding: 20px;
+  }
+  .bar-chart-wrapper {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+  }
+  .stat-box,
+  .dashboard-item-box {
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+  .dashboard-grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .progress-item {
+    width: 140px;
+  }
+  .bar-chart-wrapper {
+    min-width: 200px;
+    height: 240px;
+  }
+  .welcome {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overall-box {
+    padding: 16px;
+    margin: 15px auto;
+  }
+  .top-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .stat-box,
+  .dashboard-item-box {
+    font-size: 13px;
+    padding: 10px 8px;
+    min-width: auto;
+  }
+  .dashboard-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .progress-item {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .bar-chart-wrapper {
+    min-width: 100%;
+    height: 200px;
+  }
+  .logo {
+    width: 50px;
+  }
+  .welcome {
+    font-size: 20px;
+  }
+}

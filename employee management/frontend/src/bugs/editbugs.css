@@ -1,0 +1,380 @@
+
+
+
+#edit-project-form {
+  max-width: 600px;
+  margin: 40px auto 300px; /* ✅ Extra bottom space for dropdown */
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  position: relative; /* ✅ Ensure correct positioning */
+  overflow: visible;  /* ✅ Let dropdown overflow */
+}
+
+#edit-project-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#edit-project-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+#edit-project-form input[type="text"],
+#edit-project-form select,
+#edit-project-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+#edit-project-form textarea {
+  min-height: 100px;
+}
+
+#tags-developers span {
+  background: #ddd;
+  border-radius: 20px;
+  padding: 4px 10px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+#tags-developers button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+#button-group {
+  display: flex;
+  gap: 10px;
+}
+
+#btn-update,
+#btn-reset,
+#btn-cancel {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btn-update {
+  background: #28a745;
+}
+
+#btn-reset {
+  background: #007bff;
+}
+
+#btn-cancel {
+  background: #dc3545;
+}
+
+/*history of chats */
+
+
+
+.edit-page-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 80px auto; /* top margin */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#edit-project-form {
+  flex: 1 1 70%;  /* Take about 70% */
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.edit-page-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+#edit-project-form {
+  flex: 2;
+}
+
+.chat-history-container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 650px;
+  margin: 20px auto; /* center horizontally */
+  background-color: #fafafa;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.chat-messages {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  word-wrap: break-word;
+}
+
+/* Left aligned messages */
+.chat-message.left {
+  align-self: flex-start;
+  background-color: #e2e8f0; /* lighter color */
+  text-align: left;
+}
+
+/* Right aligned messages */
+.chat-message.right {
+  align-self: flex-end;
+  background-color: #38b2ac; /* teal */
+  color: white;
+  text-align: right;
+}
+
+/* Remove the border for name/role box */
+.entry-info-box {
+  border: none; /* removed */
+  border-radius: 0; /* removed */
+  padding: 0; /* removed */
+  margin-bottom: 6px;
+  max-width: fit-content;
+}
+
+/* Make name and role text darker */
+.entry-info-box span {
+  color: #222; /* darker text */
+  font-weight: 600;
+}
+
+/* Rest of the message text */
+.chat-message p {
+  color: #555; /* slightly lighter text for status/comments */
+  margin: 4px 0;
+}
+
+/* If message is right aligned, make sure text contrasts */
+.chat-message.right {
+  background-color: #38b2ac;
+  color: white; /* fallback for general text */
+}
+
+.chat-message.right p {
+  color: #e6fffa; /* lighter for status/comments on teal */
+}
+
+.chat-message.right .entry-info-box span {
+  color: #ffffff; /* name/role stays white on teal bubble */
+}
+
+.image-slider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.image-slider img {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  object-fit: contain;
+}
+.image-slider button {
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  user-select: none;
+}
+.image-slider button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.chat-messages {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  max-height: 400px;     /* 👈 Set scroll limit */
+  overflow-y: auto;      /* 👈 Enable vertical scroll */
+  padding-right: 10px;   /* 👈 (Optional) for scrollbar spacing */
+}
+
+.selected-images-preview {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.image-preview {
+  position: relative;
+  display: inline-block;
+}
+
+.image-preview button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: rgba(255, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  line-height: 16px;
+  text-align: center;
+  padding: 0;
+}
+
+#tags-images {
+  margin-top: 5px;
+}
+
+#tags-images .tag {
+  display: inline-block;
+  background-color: #d1ecf1;
+  color: #0c5460;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 3px 5px 3px 0;
+  font-size: 0.9rem;
+  cursor: default;
+  user-select: none;
+  position: relative;
+}
+
+#tags-images .tag button {
+  background: transparent;
+  border: none;
+  color: #0c5460;
+  font-weight: bold;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+
+#tags-images .tag button:hover {
+  color: #721c24;
+}
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.fullscreen-image {
+  max-height: 80vh;
+  max-width: 80vw;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.nav-btn {
+  background: none;
+  color: white;
+  font-size: 36px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+.nav-btn.left {
+  position: absolute;
+  left: -50px;
+}
+
+.nav-btn.right {
+  position: absolute;
+  right: -50px;
+}
+
+.image-count {
+  position: absolute;
+  bottom: -30px;
+  color: white;
+  font-size: 16px;
+}
+
+/* Shrink the preview modal image */
+.p-image-preview-container img {
+  max-width: 400px !important;
+  max-height: 300px !important;
+  object-fit: contain;
+}
+
+/* responsive styles */
+/* listbugs.css */

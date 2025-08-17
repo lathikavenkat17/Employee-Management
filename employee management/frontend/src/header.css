@@ -1,0 +1,113 @@
+/* Outer container of header */
+.headers-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 75px; /* 50px gap on the left */
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bottom{
+    padding-bottom: 25px;
+}
+/* Left section: logo and title */
+.headers-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image */
+.headers-logo {
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+}
+
+/* Title */
+.headers-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Right-side user info */
+.headers-user-info {
+  text-align: right;
+}
+
+/* User name and role text */
+.headers-user-text {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height */
+  justify-content: space-between; /* Space between header and logout */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+.headers-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headers-left {
+  display: flex;
+  align-items: center;
+}
+
+.headers-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.headers-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.headers-user-info {
+  text-align: right;
+}
+
+.headers-user-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.nav-links-button {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 90px;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.nav-links-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 75, 43, 0.5);
+}
+
+.logout-li {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  padding-top: 10px;
+}
